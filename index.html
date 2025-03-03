@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub File Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            text-align: left;
+            flex-grow: 1;
+        }
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../dowload/img/MDlogo.jpg" alt="File Preview">
+        <div class="info">
+            <h2>MDeamon</h2>
+            <a href="#">Hướng đẩn cách cài đặt,</a>
+            <a href="#" style="color: skyblue;">Hướng dẩn cách setup web </a>
+        </div>
+        <button onclick="downloadFile('https://raw.githubusercontent.com/user/repo/main/example1.txt')">Download</button>
+    </div>
+    
+    <div class="container">
+        <img src="../dowload/img/PHP.webp" alt="File Preview">
+        <div class="info">
+            <h2>Trang web động (php có CSDL)</h2>
+            <p></p>
+        </div>
+        <button onclick="downloadFile('https://www.mediafire.com/file/vx4oiabe8a6bfiz/PC.rar/file')">Download</button>
+    </div>
+    
+    <div class="container">
+        <img src="../dowload/img/VSlogo.jpg" alt="File Preview">
+        <div class="info">
+            <h2>visual studio code </h2>
+            <p></p>
+        </div>
+        <button onclick="downloadFile('https://www.mediafire.com/file/f9wwq09vpkz1kcr/Code.exe/file')">Download</button>
+    </div>
+    <div class="container">
+        <img src="../dowload/img/winra.jpg" alt="File Preview">
+        <div class="info">
+            <h2>WINRA 32 bit</h2>
+            <p></p>
+        </div>
+        <button onclick="downloadFile('https://www.mediafire.com/file/4vy4ryeij7bo1dh/wrar_700_32bit.msi/file')">Download</button>
+    </div>
+
+    <div class="container">
+        <img src="../dowload/img/msql.png" alt="File Preview">
+        <div class="info">
+            <h2>Công Cụ hổ trợ Run WEb Dộng</h2>
+            <p>chú thích : hổ trợ cho dịch vụ web động (php,mysql)</p>
+        </div>
+        <button onclick="downloadFile('https://www.mediafire.com/file/fl9aktthbxy8cid/PHP++on+IIS.rar/file')">Download</button>
+    </div>
+    <div class="container">
+        <img src="../dowload/img/fortigate.jpg" alt="File Preview">
+        <div class="info">
+            <h2>Firewall Fortigate</h2>
+            <a href="#">Hướng đẩn cài đặt và sử dụng</a>
+        </div>
+        <button onclick="downloadFile('https://www.mediafire.com/file/myj1fpbxm2zsva5/FGT_VM64-v7.0.1-build0157-FORTINET.out.ovf.zip/file')">Download</button>
+    </div>
+    <div class="container">
+        <img src="../dowload/img/xampp.png" alt="File Preview">
+        <div class="info">
+            <h2>XAMPPXAMPP</h2>
+            <p></p>
+        </div>
+        <button onclick="downloadFile('https://www.mediafire.com/file/0fdr8rh6xaqmdk5/xampp-windows-x64-8.2.12-0-VS16-installer.exe/file')">Download</button>
+    </div>
+    <div class="container">
+        <img src="../dowload/img/vmware.png" alt="File Preview">
+        <div class="info">
+            <h2>VMware veson 16.1</h2>
+            <p></p>
+        </div>
+        <button onclick="downloadFile('https://drive.google.com/file/d/171lzJ0E5L3rIlhN-KvbAE1oW9rxEOyXu/view?usp=drive_link')">Download</button>
+    </div>
+
+    <!--
+    <div class="container">
+        <img src="https://via.placeholder.com/100" alt="File Preview">
+        <div class="info">
+            <h2>Example File 3</h2>
+            <p>Description: Third example file hosted on GitHub</p>
+        </div>
+        <button onclick="downloadFile('https://raw.githubusercontent.com/user/repo/main/example3.txt')">Download</button>
+    </div>
+
+    -->
+
+    <script>
+        function downloadFile(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
